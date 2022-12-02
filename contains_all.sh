@@ -10,7 +10,7 @@ fi
 IFS=$'\n'
 for line in $(cat "${2}")
 do
-	if ! cat "${1}" | grep -q "${line}"
+	if ! cat "${1}" | grep -q -- "${line}"
 	then
 		exit 1
 	fi
